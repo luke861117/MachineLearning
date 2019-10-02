@@ -9,7 +9,7 @@ def ml_loop():
         platform_center = scene_info.platform[0]+20
         ball_center = scene_info.ball[0]+2.5
         ball_Y = scene_info.ball[1]
-        BIG_Y = 300#球會彈兩次的界線
+        BIG_Y = 325#球會彈兩次的界線
         if scene_info.status == GameStatus.GAME_OVER or \
             scene_info.status == GameStatus.GAME_PASS:
             comm.ml_ready()

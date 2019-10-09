@@ -1,0 +1,42 @@
+Requirement:
+	1.Pass all levels
+	2.ball starts at random position
+    3.FPS = 60
+Analysis:
+    1.input
+        ball_x
+		ball_y
+		platform_x
+		updown
+		leftright
+    2.output
+		goleft
+		goright
+		none
+    3.parameters
+		k = 3
+    4.method
+		knn
+Design:
+	1.data structure:
+		int ball_x,ball_y,platform_x
+		bool updown,leftright
+		List ball,platform,direction
+		Array feature_matrix
+		
+	2.Algorithm:
+		For all files in Logfiles path {
+			Add all parameters in to the lists
+			Calculate each Frame's slope,and add in to the list
+		}
+		
+		Calculate the direction of the platform 
+		Merge all features into a matrix
+		
+		Import knn function
+		Training
+		Calculate accuracy and print it
+		Save the sav file
+
+            
+

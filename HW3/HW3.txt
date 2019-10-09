@@ -1,10 +1,10 @@
 Requirement:
 	1.Pass all levels
 	2.ball starts at random position
-    3.FPS = 60
+        3.FPS = 60
 Analysis:
     1.input
-        ball_x
+        	ball_x
 		ball_y
 		platform_x
 		updown

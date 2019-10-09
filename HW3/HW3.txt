@@ -4,9 +4,9 @@ Requirement:
         3.FPS = 60
 Analysis:
     1.input
-        	ball_x
-		ball_y
-		platform_x
+        	ball_center_x
+		ball_center_y
+		platform_center_x
 		updown
 		leftright
     2.output
@@ -19,7 +19,7 @@ Analysis:
 		knn
 Design:
 	1.data structure:
-		int ball_x,ball_y,platform_x
+		int ball_center_x,ball_center_y,platform_center_x
 		bool updown,leftright
 		List ball,platform,direction
 		Array feature_matrix

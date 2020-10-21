@@ -5,7 +5,7 @@ Created on Wed Oct 21 17:14:41 2020
 @author: DK
 """
 
-import games.arkanoid.game.gamecore as comm
+
 
 class MLPlay:
     def __init__(self):
@@ -18,7 +18,7 @@ class MLPlay:
         """
         Generate the command according to the received `scene_info`.
         """
-        # scene_info = comm.get_scene_info()
+        
         platform_center = scene_info["platform"][0]+20
         ball_center = scene_info["ball"][0]+2.5
         ball_Y = scene_info["ball"][1]
@@ -34,37 +34,33 @@ class MLPlay:
                 if platform_center < 20	:
                     command = "MOVE_RIGHT"
                     return command
-                    # comm.send_instruction(scene_info.["frame"], PlatformAction.MOVE_RIGHT)
+                    
                 elif platform_center > 20	:
                     command = "MOVE_LEFT"
                     return command
-                    # comm.send_instruction(scene_info.["frame"], PlatformAction.MOVE_LEFT)
+                    
             elif ball_center < 100: 
                 if platform_center < 180	:
                     command = "MOVE_RIGHT"
                     return command
-                    # comm.send_instruction(scene_info.["frame"], PlatformAction.MOVE_RIGHT)
+                    
                 elif platform_center > 180	:
                     command = "MOVE_LEFT"
                     return command
-                    # comm.send_instruction(scene_info.["frame"], PlatformAction.MOVE_LEFT)
+                   
         elif ball_Y>= BIG_Y:
             if platform_center < ball_center:
                 command = "MOVE_RIGHT"
                 return command
-                # comm.send_instruction(scene_info.["frame"], PlatformAction.MOVE_RIGHT)
+                
             elif platform_center > ball_center:
                 command = "MOVE_LEFT"
                 return command
-                # comm.send_instruction(scene_info.["frame"], PlatformAction.MOVE_LEFT)
+                
 
         if not self.ball_served:
             self.ball_served = True
-        #     command = "SERVE_TO_LEFT"
-        # else:
-        #     command = "MOVE_LEFT"
-
-        # return command
+        
 
     def reset(self):
         """

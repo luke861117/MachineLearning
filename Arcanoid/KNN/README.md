@@ -1,7 +1,7 @@
-# Arkanoid 
+# Arkanoid KNN 
 
 
-- rulebase_4.0_.py 2019.9.5 </p>
+- knn_4_0_0.py 2020.10.28 </p>
 
-- rulebase_8.0.1_.py 2020.10.21 </p>
+
 

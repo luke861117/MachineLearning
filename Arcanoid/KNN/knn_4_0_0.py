@@ -28,12 +28,8 @@ def ml_loop():
             vy=ball_postition_history[-1][1]-ball_postition_history[-2][1]
         
             temp=np.array([scene_info.ball[0],scene_info.ball[1],scene_info.platform[0],vx,vy])
-            Result=temp[np.newaxis, :]
-        
-        # if scene_info.status == GameStatus.GAME_OVER or scene_info.status == GameStatus.GAME_PASS:           
-        #     print( "end" ,end='\n')            
-        #     comm.ml_ready()
-        #     continue
+            Result=temp[np.newaxis, :]        
+       
         if scene_info.status == GameStatus.GAME_OVER:           
             print( "Lose" ,end='\n')            
             comm.ml_ready()
